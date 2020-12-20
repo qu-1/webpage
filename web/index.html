@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Home</title>
+	<style type = "text/css">
+	.top-header{
+		background-color: yellow;
+		height: 60px;
+	}
+	.header-left{
+		height: 30px;
+	}
+	.login{
+		float: right;
+	}
+	a{
+		text-decoration: none;
+	}
+	li:hover{
+		background-color: pink;
+	}
+	.search{
+		float: right;
+	}
+
+	.bottom-header{
+		height: 220px;
+	}
+	ul{
+		list-style: none;
+	}
+	.inli{
+		display: none;
+	}
+	.nav{
+		float: right;
+		display: block;
+	}
+	.nav li{
+		float: left;
+	}
+
+	
+	.preview{
+		float: left;
+	}
+	.watch-and-buy{
+		background-color: green;
+		height: 350px;
+	}
+	.footer{
+		height: 250px;
+	}
+	.foot{
+		height: 250px;
+		background-color: yellow;
+	}
+	.f{
+		width: 300px;
+		float: right;
+	}
+	</style>
+<script>
+	function xianshi(){
+		document.getElementById("inli1").style.display="block";
+
+	}
+	function yincang(){
+		document.getElementById("inli1").style.display="none";
+	}
+	function xianshi2(){
+		document.getElementById("inli2").style.display="block";
+
+	}
+	function yincang2(){
+		document.getElementById("inli2").style.display="none";
+	}
+	function xianshi3(){
+		document.getElementById("inli3").style.display="block";
+
+	}
+	function yincang3(){
+		document.getElementById("inli3").style.display="none";
+	}
+
+	window.onload=function(){
+			var container=document.getElementById("container");
+			var getBgColor = document.getElementById("getBgColor");
+			getBgColor.onclick=function(){
+				console.log(container.style.backgroundColor);
+			}
+			changeBgColor.onclick=function(){
+				container.style.backgroundColor="pink";
+			}
+		}
+	function confirmDialog(){
+		var msg = confirm("您要继续浏览我们的产品吗？");
+		if(msg){
+			console.log("用户选择了确认按钮");
+		}
+		else{
+			console.log("用户选择了取消按钮");
+		}
+	}
+</script>
+		
+</head>
+<body>
+	<div class="header">
+		<div class="top-header">
+			<div class="container">
+				<div class="header-left">
+					<p>Take and Extra 20% OFF with order upto $99（请适当调整浏览器大小）</p>
+				</div>
+				<div class="login">
+					<a href="#">Login</a>||<a href="#">Register</a>
+				</div>
+					<div id="search" class="sb-search">
+						<form>
+							<input class="search-input" placeholder="Enter your search term..." type="search" name="search" id="search">
+							<input class="submit" type="submit" value="搜索">
+						</form>
+					</div>
+			</div>
+		</div>
+	</div>
+		<div class="bottom-header">
+			<div class="container" id="container">
+				<div class="logo">
+					<a href="WEB2-8.html"><h1>sporty</h1></a>
+				</div>
+				<div class="header_bottom_right">
+						<a class="toggleMenu" href=""><h2>Menu</h2></a>
+					<ul class="nav">
+						<li class="active"><a href="WEB2-8.html"><h4>[HOME]</h4></a></li>
+						<li onmouseover="xianshi()" onmouseout="yincang()"><a href="#" class="root"><h4>[FOOTBALL]</h4></a>
+							<ul id="inli1" class="inli">
+								<li><a href="#">[Accessories]</a></li>
+								<li><a href="#">]Footwear]</a></li>
+								<li><a href="#">[t-shirts]</a></li>
+								<li><a href="#">[balls]</a></li>
+								<li><a href="#">[sales]</a></li>
+							</ul>
+						</li>
+						<li onmouseover="xianshi2()" onmouseout="yincang2()"><a href="#"><h4>[BIKES]</h4></a>
+							<ul id="inli2" class="inli">
+								<li><a href="#">[Footwear]</a></li>
+								<li><a href="#">[spets]</a></li>
+								<li><a href="#">[arms]</a></li>
+								<li><a href="#">[sales]</a></li>
+							</ul>
+						</li>
+						<li onmouseover="xianshi3()" onmouseout="yincang3()"><a href="#"><h4>[GOLF]</h4></a>
+							<ul id="inli3" class="inli">
+								<li><a href="#">[Accessories]</a></li>
+								<li><a href="#">[Footwear]</a></li>
+								<li><a href="#">[Apparel]</a></li>
+							</ul>
+						</li>
+						<li><a href="https://www.baidu.com/"><h4>[CONTACT]</h4></a></li>
+						</ul>
+					</div>
+					<div>
+					<input type="button" value="获取背景颜色" id="getBgColor"/>
+					<input type="button" value="更改背景颜色" id="changeBgColor"/>
+					<input type="button" value="确认框" onclick="confirmDialog();" /><br/>
+					</div>
+			</div>
+		</div>
+			<div class="watch-and-buy">
+				<div class="select">
+					<h2>watch & Buy</h2>
+				</div>
+				<div class="preview">
+					<img src="images/side2.jpg" alt="" />
+					<i class="bag"></i>
+				</div>
+				<div class="preview">
+					<img src="images/side1.jpg" alt="" />
+					<i class="bag"></i>
+				</div>
+				<div class="preview">
+					<img src="images/side.jpg" alt="" />
+					<i class="bag"></i>
+				</div>
+		    </div>
+	<div class="footer"> 
+		<div class="foot">
+			<div class="f">
+				<h3>shop</h3>
+				<ul>
+					<li><a href="#">new arrivals</a></li>
+					<li><a href="#">men</a></li>
+					<li><a href="#">accessories</a></li> 
+					<li><a href="#">kids</a></li>
+					<li><a href="#">brands</a></li>
+					<li><a href="#">trends</a></li>
+					<li><a href="#">sale</a></li>
+					<li><a href="#">style videos</a></li>
+				</ul>
+			</div>
+			<div class="f">
+				<h3>help</h3>
+				<ul>
+					<li><a href="#">frequently asked questions</a></li>
+					<li><a href="#">women</a></li>
+					<li><a href="#">style videos</a></li>
+					<li><a href="#">sale</a></li>
+					<li><a href="#">trends</a></li>
+					<li><a href="#">style videos</a></li>
+				</ul>
+			</div>
+			<div class="f">
+				<h3>account</h3>
+				<ul>
+					<li><a href="#">my sports</a></li>
+					<li><a href="#">my orders</a></li>
+					<li><a href="#">my shopping bag</a></li>
+					<li><a href="#">my wishlist</a></li>
+				</ul>
+			</div>
+			<div class="f">
+				<h3>popular</h3>
+				<ul>
+					<li><a href="#">accessories</a></li>
+					<li><a href="#">brands</a></li>
+					<li><a href="#">frequently asked questions</a></li>
+					<li><a href="#">style videos</a></li>
+					<li><a href="#">women</a></li>
+					<li><a href="#">my orders</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
